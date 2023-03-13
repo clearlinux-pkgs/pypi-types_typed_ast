@@ -1,5 +1,5 @@
 PKG_NAME := pypi-types_typed_ast
-URL = https://files.pythonhosted.org/packages/58/6d/55a37fe9fc7944487b9e4e163d866af29d8eae6faea6073b953d31280bac/types-typed-ast-1.5.8.4.tar.gz
+URL = https://files.pythonhosted.org/packages/3a/25/fec44461192019eaecebf52489e2abf417e7522071417b8b25f302d7c3ac/types-typed-ast-1.5.8.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
