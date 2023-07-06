@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-types_typed_ast
-Version  : 1.5.8.6
-Release  : 10
-URL      : https://files.pythonhosted.org/packages/42/22/98b30750373fb3e262e3858a56bbd7506244960ed5c27a9dc7321ea99ab0/types-typed-ast-1.5.8.6.tar.gz
-Source0  : https://files.pythonhosted.org/packages/42/22/98b30750373fb3e262e3858a56bbd7506244960ed5c27a9dc7321ea99ab0/types-typed-ast-1.5.8.6.tar.gz
+Version  : 1.5.8.7
+Release  : 11
+URL      : https://files.pythonhosted.org/packages/dc/44/2b4c6b15bf901533966f63ca5b073e4f9b7a9532bb4a64d9ceb83432db9b/types-typed-ast-1.5.8.7.tar.gz
+Source0  : https://files.pythonhosted.org/packages/dc/44/2b4c6b15bf901533966f63ca5b073e4f9b7a9532bb4a64d9ceb83432db9b/types-typed-ast-1.5.8.7.tar.gz
 Summary  : Typing stubs for typed-ast
 Group    : Development/Tools
 License  : Apache-2.0
@@ -41,10 +41,10 @@ python3 components for the pypi-types_typed_ast package.
 
 
 %prep
-%setup -q -n types-typed-ast-1.5.8.6
-cd %{_builddir}/types-typed-ast-1.5.8.6
+%setup -q -n types-typed-ast-1.5.8.7
+cd %{_builddir}/types-typed-ast-1.5.8.7
 pushd ..
-cp -a types-typed-ast-1.5.8.6 buildavx2
+cp -a types-typed-ast-1.5.8.7 buildavx2
 popd
 
 %build
@@ -52,15 +52,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680015468
+export SOURCE_DATE_EPOCH=1688662792
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
